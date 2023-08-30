@@ -1,0 +1,6 @@
+<h1>My Reddit</h1>
+<h2>{{PostResponse.kind}}</h2>
+<input type="text" [(ngModel)]="subreddit" />
+<button (click)="CallApi()">Search Subreddit</button>
+<p>{{status}}</p>
+<app-child-result *ngFor="let c of PostResponse.data.children" [DisplayPost]="c"></app-child-result>
